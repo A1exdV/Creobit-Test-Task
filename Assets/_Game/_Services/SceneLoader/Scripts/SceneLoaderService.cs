@@ -1,5 +1,5 @@
-using System;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using R3;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -13,35 +13,35 @@ namespace SceneLoader
         private static readonly ReactiveProperty<float> _progress = new();
 
         private const int LoadingSceneIndex = 1;
+        private const int MainMenuIndex = 0;
 
-        private static void EnableLoadingScene()
+        public static void LoadMainMenu()
         {
-            SceneManager.LoadScene(LoadingSceneIndex, LoadSceneMode.Additive);
+            LoadSceneByIndex(MainMenuIndex);
         }
-
         public static async void LoadSceneByIndex(int index)
         {
-            EnableLoadingScene();
+            await SceneManager.LoadSceneAsync(LoadingSceneIndex, LoadSceneMode.Single);
+            await Task.Yield();
             
-            _progress.Value = 0;
             var scene = SceneManager.LoadSceneAsync(index);
-            if (scene == null)
-            {
-                throw new IndexOutOfRangeException(index.ToString());
-            }
-            scene.allowSceneActivation = false;
+            _progress.Value = 0;
+            
             do
             {
                 await Task.Yield();
                 _progress.Value = scene.progress;
+                Debug.Log($"Scene Progress - {scene.progress}");
             } while (scene.progress < 0.9f);
 
-            scene.allowSceneActivation = true;
         }
+        
+        
 
         public static async void LoadSceneByReference(AssetReference reference)
         {
-            EnableLoadingScene();
+            await SceneManager.LoadSceneAsync(LoadingSceneIndex, LoadSceneMode.Single);
+            await Task.Yield();
             
             var handle = Addressables.LoadSceneAsync(reference);
             _progress.Value = 0;
@@ -50,7 +50,7 @@ namespace SceneLoader
             {
                 await Task.Yield();
                 _progress.Value = handle.PercentComplete;
-                Debug.Log(handle.PercentComplete);
+                Debug.Log($"Scene Progress - {handle.PercentComplete}");
             } while (!handle.IsDone);
         }
     }

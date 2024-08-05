@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2011e9a2-e023-45be-87d0-e6257f8783bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Creobit-Test-Task/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Creobit-Test-Task/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Clicker Game/Clicker.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Clicker Game/Clicker.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Clicker Game/Scripts/Clicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Clicker Game/Scripts/Clicker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Reflex/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Reflex/ProjectInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Services/SceneLoader/Scripts/SceneLoaderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Services/SceneLoader/Scripts/SceneLoaderService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,7 @@
       <workItem from="1722769460007" duration="982000" />
       <workItem from="1722773642048" duration="632000" />
       <workItem from="1722848836838" duration="8814000" />
-      <workItem from="1722858343774" duration="12584000" />
+      <workItem from="1722858343774" duration="14168000" />
     </task>
     <servers />
   </component>

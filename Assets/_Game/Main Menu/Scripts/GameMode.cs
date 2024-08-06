@@ -42,6 +42,7 @@ namespace Main_Menu.Scripts
 
         private void Awake()
         {
+            ButtonsInteraction(ButtonsState.Loading);
             load.onClick.AddListener(OnLoad);
             play.onClick.AddListener(OnPlay);
             release.onClick.AddListener(OnRelease);
@@ -56,7 +57,7 @@ namespace Main_Menu.Scripts
             
             handle.Completed += operationHandle =>
             {
-                if (operationHandle.Result == 0)
+                if (operationHandle.Result == 0 & handle.Status == AsyncOperationStatus.Succeeded)
                 {
                     Debug.Log($"{_config.GameName} cache found.");
                     _handle = Addressables.DownloadDependenciesAsync(_config.GameScene);

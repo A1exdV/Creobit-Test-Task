@@ -98,11 +98,6 @@ namespace Adventure_Game.ThirdPersonController.Scripts
             AssignAnimationIDs();
         }
 
-        private void OnCollisionEnter(Collision other)
-        {
-            Debug.Log($"Enter {other.gameObject.name}");
-        }
-
         private void InputSubscription()
         {
             _input.Player.Look.started += GetCameraRotation;

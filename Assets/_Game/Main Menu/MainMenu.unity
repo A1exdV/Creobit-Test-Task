@@ -219,6 +219,7 @@ MonoBehaviour:
   prefab: {fileID: 313079934233739932, guid: 7d6c7a73eac27494b9349a5cb422ce4b, type: 3}
   gameConfigs:
   - {fileID: 11400000, guid: 96ddb2627deaf434cb5c2c92f2f891a7, type: 2}
+  - {fileID: 11400000, guid: 065aa1ab25b8d5e469c2db7464cbd316, type: 2}
 --- !u!114 &749336173
 MonoBehaviour:
   m_ObjectHideFlags: 0

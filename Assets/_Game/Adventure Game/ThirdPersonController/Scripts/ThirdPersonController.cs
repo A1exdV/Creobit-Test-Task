@@ -1,19 +1,15 @@
-﻿using System;
-using Reflex.Extensions;
+﻿using Reflex.Extensions;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
-
 /*
   Основа взята с дефолтного Unity контроллера из пака https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526
-  Из контроллера вырезаны прыжки и гравитация. Вынесено управление.
+  Из контроллера вырезаны прыжки и гравитация. управление переделано на подписки на нажатия. Character Controller заменен на Rigidbody.
   Контроллер подчиняется состоянию игры.
  */
-
 namespace Adventure_Game.ThirdPersonController.Scripts
 {
-    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(Rigidbody))]
     public class ThirdPersonController : MonoBehaviour
     {
         [Header("Player")]
@@ -22,53 +18,50 @@ namespace Adventure_Game.ThirdPersonController.Scripts
 
         [Tooltip("Sprint speed of the character in m/s")]
         [SerializeField] private float sprintSpeed = 5.335f;
-        
+
         [Tooltip("How fast the character turns to face movement direction")]
         [Range(0.0f, 0.3f)]
         [SerializeField] private float rotationSmoothTime = 0.12f;
-        
+
         [Tooltip("Acceleration and deceleration")]
         [SerializeField] private float speedChangeRate = 10.0f;
-        
+
         [Tooltip("How fast the camera rotate around the character")]
         [SerializeField] private float sensitivity = 2.0f;
-        
+
         [SerializeField] private AudioClip[] footstepAudioClips;
         [Range(0, 1)] [SerializeField] private float footstepAudioVolume = 0.5f;
-        
+
         [Header("Cinemachine")]
         [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
         [SerializeField] private GameObject cinemachineCameraTarget;
-        
+
         [Tooltip("How far in degrees can you move the camera up")]
         [SerializeField] private float topClamp = 70.0f;
-        
+
         [Tooltip("How far in degrees can you move the camera down")]
         [SerializeField] private float bottomClamp = -30.0f;
-        
-        [Tooltip("Additional degress to override the camera. Useful for fine tuning camera position when locked")]
+
+        [Tooltip("Additional degrees to override the camera. Useful for fine tuning camera position when locked")]
         [SerializeField] private float cameraAngleOverride;
-        
+
         [Tooltip("For locking the camera position on all axis")]
         [SerializeField] private bool lockCameraPosition;
-        
+
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
-        
+
         private float _speed;
         private float _animationBlend;
         private float _targetRotation;
         private float _rotationVelocity;
         private float _verticalVelocity;
-        
-        private float _jumpTimeoutDelta;
-        private float _fallTimeoutDelta;
-        
+
         private int _animIDSpeed;
         private int _animIDMotionSpeed;
-        
+
         private Animator _animator;
-        private CharacterController _controller;
+        private Rigidbody _rigidbody;
         private PlayerInputSystem _input;
         private GameObject _mainCamera;
 
@@ -91,28 +84,35 @@ namespace Adventure_Game.ThirdPersonController.Scripts
         private void Start()
         {
             _cinemachineTargetYaw = cinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
-            _controller = GetComponent<CharacterController>();
-            
+            _rigidbody = GetComponent<Rigidbody>();
+            _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+
             _input = gameObject.scene.GetSceneContainer().Resolve<PlayerInputSystem>();
-            
+
             _input.Enable(); //TODO: Move to main scene script
-            
+
             InputSubscription();
 
-
             AssignAnimationIDs();
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            Debug.Log($"Enter {other.gameObject.name}");
         }
 
         private void InputSubscription()
         {
             _input.Player.Look.started += GetCameraRotation;
+            _input.Player.Look.performed += GetCameraRotation;
             _input.Player.Look.canceled += GetCameraRotation;
-            
+
             _input.Player.Move.started += GetDirection;
+            _input.Player.Move.performed += GetDirection;
             _input.Player.Move.canceled += GetDirection;
-            
+
             _input.Player.Sprint.started += Sprint;
             _input.Player.Sprint.canceled += Sprint;
         }
@@ -129,8 +129,9 @@ namespace Adventure_Game.ThirdPersonController.Scripts
 
         private void Sprint(InputAction.CallbackContext callbackContext)
         {
-            _isSprinting = callbackContext.ReadValue<float>() > 0? true: false;
+            _isSprinting = callbackContext.ReadValue<float>() > 0 ? true : false;
         }
+
         private void AssignAnimationIDs()
         {
             _animIDSpeed = Animator.StringToHash("Speed");
@@ -139,8 +140,9 @@ namespace Adventure_Game.ThirdPersonController.Scripts
 
         private void GetCameraRotation(InputAction.CallbackContext callbackContext)
         {
-            _look = callbackContext.ReadValue<Vector2>()*sensitivity;
+            _look = callbackContext.ReadValue<Vector2>() * sensitivity;
         }
+
         private void CameraRotation()
         {
             if (_look.sqrMagnitude >= Threshold && !lockCameraPosition)
@@ -151,7 +153,7 @@ namespace Adventure_Game.ThirdPersonController.Scripts
 
             _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
             _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, bottomClamp, topClamp);
-            
+
             cinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + cameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
         }
@@ -160,24 +162,24 @@ namespace Adventure_Game.ThirdPersonController.Scripts
         {
             _move = callbackContext.ReadValue<Vector2>();
         }
+
         private void Move()
         {
             var targetSpeed = _isSprinting ? sprintSpeed : moveSpeed;
-            
+
             if (_move == Vector2.zero) targetSpeed = 0.0f;
 
-
-            var currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
+            var currentHorizontalSpeed = new Vector3(_rigidbody.velocity.x, 0.0f, _rigidbody.velocity.z).magnitude;
 
             var speedOffset = 0.1f;
-            var inputMagnitude = _move.magnitude;
-            
+            var inputMagnitude = _move.normalized.magnitude;
+
             if (currentHorizontalSpeed < targetSpeed - speedOffset ||
                 currentHorizontalSpeed > targetSpeed + speedOffset)
             {
                 _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
                     Time.deltaTime * speedChangeRate);
-                
+
                 _speed = Mathf.Round(_speed * 1000f) / 1000f;
             }
             else
@@ -187,32 +189,29 @@ namespace Adventure_Game.ThirdPersonController.Scripts
 
             _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * speedChangeRate);
             if (_animationBlend < 0.01f) _animationBlend = 0f;
-            
+
             var inputDirection = new Vector3(_move.x, 0.0f, _move.y).normalized;
-            
+
             if (_move != Vector2.zero)
             {
                 _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
                                   _mainCamera.transform.eulerAngles.y;
                 float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
                     rotationSmoothTime);
-                
+
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
             }
 
-
             var targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-            
-            _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
-                             new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-            
+
+            _rigidbody.velocity = targetDirection.normalized * (_speed) + new Vector3(0.0f, _rigidbody.velocity.y, 0.0f);
+
             if (_hasAnimator)
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
-        
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
         {
@@ -221,14 +220,14 @@ namespace Adventure_Game.ThirdPersonController.Scripts
             return Mathf.Clamp(lfAngle, lfMin, lfMax);
         }
 
-        //DONT DELETE
+        //DON'T DELETE
         //Used by animator
         private void OnFootstep(AnimationEvent animationEvent)
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f && footstepAudioClips.Length > 0)
             {
                 var index = Random.Range(0, footstepAudioClips.Length);
-                AudioSource.PlayClipAtPoint(footstepAudioClips[index], transform.TransformPoint(_controller.center),
+                AudioSource.PlayClipAtPoint(footstepAudioClips[index], transform.TransformPoint(_rigidbody.centerOfMass),
                     footstepAudioVolume);
             }
         }

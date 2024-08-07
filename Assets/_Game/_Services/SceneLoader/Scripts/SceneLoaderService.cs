@@ -42,7 +42,6 @@ namespace SceneLoader
         {
             await SceneManager.LoadSceneAsync(LoadingSceneIndex, LoadSceneMode.Single);
             await Task.Yield();
-            
             var handle = Addressables.LoadSceneAsync(reference);
             _progress.Value = 0;
             

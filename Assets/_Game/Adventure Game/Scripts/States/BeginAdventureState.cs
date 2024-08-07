@@ -1,5 +1,6 @@
 ﻿using Adventure_Game.ThirdPersonController.Scripts;
 using FSM;
+using SceneLoader;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,11 +26,14 @@ namespace Adventure_Game.Scripts.States
         {
             base.Enter();
             _adventureUI.Enable(UI.Await);
-
+            _adventureUI.OnExitPressed += OnOnExitPressed;
             _customCharacterController.transform.position = _startPosition.position;
             _input.Player.Move.started += OnPlayerStartMoving;
         }
-
+        private void OnOnExitPressed()
+        {
+            SceneLoaderService.LoadMainMenu();
+        }
         private void OnPlayerStartMoving(InputAction.CallbackContext callbackContext)
         {
             FiniteStateMachine.ChangeStateTo<RunningAdventureState>();
@@ -38,6 +42,7 @@ namespace Adventure_Game.Scripts.States
         public override void Exit()
         {
             base.Exit();
+            _adventureUI.OnExitPressed -= OnOnExitPressed;
             _input.Player.Move.started -= OnPlayerStartMoving;
         }
     }

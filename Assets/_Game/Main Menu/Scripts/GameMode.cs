@@ -1,18 +1,12 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Reflex.Attributes;
-using Reflex.Extensions;
 using SceneLoader;
 using Scripts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.ResourceManagement.ResourceProviders;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Main_Menu.Scripts
@@ -60,7 +54,7 @@ namespace Main_Menu.Scripts
                 if (operationHandle.Result == 0 & handle.Status == AsyncOperationStatus.Succeeded)
                 {
                     Debug.Log($"{_config.GameName} cache found.");
-                    _handle = Addressables.DownloadDependenciesAsync(_config.GameScene);
+                    DownloadDependencies();
                     ButtonsInteraction(ButtonsState.Loaded);
                 }
                 else
@@ -79,17 +73,13 @@ namespace Main_Menu.Scripts
         
         private void OnPlay()
         {
-            Debug.Log($"{_config.GameName} starting game.");
-            SceneLoaderService.LoadSceneByReference(_config.GameScene);
+                Debug.Log($"{_config.GameName} starting game.");
+                SceneLoaderService.LoadSceneByReference(_config.GameScene);
         }
         
         private void OnRelease()
         {
-            if (_handle.IsValid())
-            {
-                Addressables.Release(_handle);
-                Addressables.ClearDependencyCacheAsync(_config.GameScene);
-            }
+            Addressables.ClearDependencyCacheAsync(_config.GameScene);
             Debug.Log($"{_config.GameName} cache released.");
             ButtonsInteraction(ButtonsState.Unloaded);
         }
@@ -111,9 +101,10 @@ namespace Main_Menu.Scripts
 
         private void OnDependenciesDownloaded(AsyncOperationHandle handle)
         {
-            if (handle.Status == AsyncOperationStatus.Succeeded)
+            if (handle.Status == AsyncOperationStatus.Succeeded && handle.IsValid())
             {
                 Debug.Log($"{_config.GameName} downloaded.");
+                Addressables.Release(handle);
                 _handle = handle;
                 ButtonsInteraction(ButtonsState.Loaded);
             }

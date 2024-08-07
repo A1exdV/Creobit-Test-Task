@@ -31,15 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Esc",
-                    "type": "Button",
-                    "id": "72b9cc96-af1d-4f9e-9256-63b89d303ec4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -161,17 +152,6 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7a9e2f60-56cb-4d34-9504-1460191f2b73",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Esc",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

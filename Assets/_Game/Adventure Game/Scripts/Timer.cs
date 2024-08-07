@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using R3;
 using UnityEngine;
@@ -10,6 +11,11 @@ namespace Adventure_Game.Scripts
         private readonly ReactiveProperty<float> _time = new ();
         private Coroutine _timerRoutine;
 
+        private void Awake()
+        {
+            gameObject.name = "[TIMER]";
+        }
+
         public void StartTimer()
         {
             _time.Value = 0;
@@ -20,7 +26,8 @@ namespace Adventure_Game.Scripts
 
         public float StopTimer()
         {
-            StopCoroutine(_timerRoutine);
+            if(_timerRoutine!= null) 
+                StopCoroutine(_timerRoutine);
             return _time.Value;
         }
 

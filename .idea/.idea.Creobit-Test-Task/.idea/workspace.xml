@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2011e9a2-e023-45be-87d0-e6257f8783bb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Creobit-Test-Task/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Creobit-Test-Task/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scenes Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scenes Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Adventure.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Adventure.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Prefabs/Character.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Prefabs/Character.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Prefabs/Finish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Prefabs/Finish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Scripts/AdventureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Scripts/AdventureInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Adventure Game/Scripts/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/Locomotion--Run_N.anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/Locomotion--Run_N.anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/Locomotion--Walk_N.anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/Locomotion--Walk_N.anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/Stand--Idle.anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/Stand--Idle.anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/StarterAssetsThirdPerson.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Animations/StarterAssetsThirdPerson.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials/M_Armature_Arms.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials/M_Armature_Arms.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials/M_Armature_Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials/M_Armature_Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials/M_Armature_Legs.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Materials/M_Armature_Legs.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Models/Armature.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Models/Armature.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_01.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_02.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_03.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_04.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_05.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_06.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_07.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_08.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_09.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Sfx/Player_Footstep_10.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_AlbedoTransparency.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_AlbedoTransparency.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_MetallicSmoothness.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_MetallicSmoothness.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_Normal.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_Normal.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_RGB.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Arms_RGB.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_AlbedoTransparency.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_AlbedoTransparency.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_MetallicSmoothness.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_MetallicSmoothness.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_Normal.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_Normal.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_RGB.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Body_RGB.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_AlbedoTransparency.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_AlbedoTransparency.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_MetallicSmoothness.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_MetallicSmoothness.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_Normal.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_Normal.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_RGB.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Character/Textures/Armature_Legs_RGB.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Scripts/BasicRigidBodyPush.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Scripts/BasicRigidBodyPush.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Scripts/ThirdPersonController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/ThirdPersonController/Scripts/ThirdPersonController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Adventure Game/materials/Finish.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Adventure Game/materials/Finish.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Services/InputSystem/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Services/InputSystem/PlayerInputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/_Services/InputSystem/PlayerInputSystem.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/_Services/InputSystem/PlayerInputSystem.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge/4b415b51902622bd1683be9145c97693_unitybuiltinshaders_673b2e9280f78256e66687f8adf3cafa.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge/catalog_1.0.1.hash" beforeDir="false" afterPath="$PROJECT_DIR$/CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge/catalog_1.0.1.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge/catalog_1.0.1.json" beforeDir="false" afterPath="$PROJECT_DIR$/CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge/catalog_1.0.1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge/scenesgroup_scenes_clicker_54ff5249f6fe01910454af523cb04ba7.bundle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfbc89a04b6b4dd49c3614d03fc31ce846ac00/3b/bf13b3a4/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bff907ed581f483ab4bd129472866e971fe00/f0/33004392/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Adventure Game/Scripts/AdventureInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Main Menu/Scripts/ExitGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Main Menu/Scripts/GameMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/_Services/InputSystem/PlayerInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/ResourceManager/AsyncOperations/AsyncOperationBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/ResourceManager/Util/DelegateList.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.21/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2k9AoAXtEGMHF6HbSmIvHQttH90" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\AlexdV-PC\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\AlexdV-PC\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\AlexdV-PC\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="U:\UnityHub\Editor\2022.3.19f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;U:\Unity Projects\Creobit-Test-Task&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="U:\Unity Projects\Creobit-Test-Task" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="U:\UnityHub\Editor\2022.3.19f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;U:\Unity Projects\Creobit-Test-Task&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="U:\Unity Projects\Creobit-Test-Task" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2011e9a2-e023-45be-87d0-e6257f8783bb" name="Changes" comment="" />
+      <created>1722685591983</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722685591983</updated>
+      <workItem from="1722685593662" duration="2032000" />
+      <workItem from="1722688623538" duration="6894000" />
+      <workItem from="1722765604514" duration="3462000" />
+      <workItem from="1722769460007" duration="982000" />
+      <workItem from="1722773642048" duration="632000" />
+      <workItem from="1722848836838" duration="8814000" />
+      <workItem from="1722858343774" duration="16630000" />
+      <workItem from="1722931812741" duration="1961000" />
+      <workItem from="1722948718131" duration="13376000" />
+      <workItem from="1722976460386" duration="2026000" />
+      <workItem from="1723022912631" duration="14270000" />
+      <workItem from="1723040871940" duration="200000" />
+      <workItem from="1723041331377" duration="33000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
